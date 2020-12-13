@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Кодирование
+	</title>
+</head>
+<body>
+	<body style="background-color:#F0FFF0;">
+	<div style="position: relative;background-color: #90EE90;width: 100%; height: 100px; top: -10px;">
+		<h1 style="position: relative; text-align: center; top: 25px;">Тренажер по теме "Кодирование", 7 класс</h1>
+	</div>
+		<div>
+		<ul>
+			<button style="position: relative;background-color: #90EE90;"><li><a href="#Передача текстовой информации">Передача текстовой информации</a></li></button>
+			<button style="position: relative;background-color: #90EE90;"><li><a href="#Кодирование графики">Кодирование графики</a></li></button>
+		</ul>
+	</div>
+	<section id="Передача текстовой информации">
+	<div>
+		<hr>	
+		<h2 style="position: relative; text-align: center;">Передача текстовой информации</h2>
+		<h3 style="position: relative; left: 3%">Справочные материалы</h3>
+		<p style="position: relative; left: 3%;width: 95%"><big> Алфавит любого языка можно заменить двоичным алфавитом. Для кодирования N символов произвольного алфавита требуется i-разрядный двоичный код. Информационный вес символа = разрядность двоичного кода. Мощность алфавита и информационный вес символа алфавита: N=2^i
+		<br><br>
+		Информационный объем сообщения (количество информации в сообщениии), представленного символами естественного и формального языка, складывается из информационных весов составляющих его символов. Информационный объем сообщения I равен произведению количества символов в сообщении k на информационный вес символа алфавита i: I=k*i </big></p>
+		<p style="position: relative; left: 3%;width: 95%"> <a style="position: relative; left: 0%;width: 95%"; href="https://lbz.ru/metodist/authors/informatika/3/eor7.php">Босова, электронное приложение к учебнику</a> </p>
+		<img style="position: relative; width:400px; height: 250px; left: 30%"; src="img/img.jpg"> </img>
+		<br><br>
+
+		<h3 style="position: relative; left: 3%">Тестовые задания</h3>
+		<p style="position: relative; left: 3%;width: 95%"><big>
+		Задание 1:
+		<br>
+		Алфавит племени Пульти содержит 16 символов. Каков информационный вес символа этого алфавита?
+		<br>
+		Ответ: <input type="text" id="a1">
+		<br><br>
+		Задание 2:
+		<br>
+		Сообщение, записанное буквами 32-символьного алфавита, содержит 125 символов. Какое количество информации оно несёт? Ответ дайте в битах.
+		<br>
+		Ответ: <input type="text" id="a2">
+		<br><br>
+		Задание 3:
+		<br>
+		Информационное сообщение объёмом 640 битов состоит из 160 символов. Какова мощность алфавита, с помощью которого записано это сообщение?
+		<br>
+		Ответ: <input type="text" id="a3">
+		<br><br>
+		Задание 4:
+		<br>
+		Для записи текста использовался 64-символьный алфавит. Какой объём информации в байтах содержат 10 страниц текста, если на каждой странице расположено 16 строк по 16 символа в строке?
+		<br>
+		Ответ: <input type="text" id="a4">
+		<br><br>
+		Задание 5:
+		<br>
+		Информационный объём сообщения равен 4 Кб. Информационный вес символа – 32 бита. Сколько символов содержит сообщение?
+		<br>
+		Ответ: <input type="text" id="a5">
+		<br><br>
+		Задание 6:
+		<br>
+		Сколько килобайт составит сообщение из 4096 символов 16-символьного алфавита?
+		<br>
+		Ответ: <input type="text" id="a6">
+		<br><br>
+		Задание 7:
+		<br>
+		Жители планеты ЛИ-32 отправили на Землю сообщение, записанное с помощью всех символов используемого ими алфавита: DADWSDA! Определите информационный объем этого сообщения. Ответ дайте в байтах. 
+		<br>
+		Ответ: <input type="text" id="a7">								
+		<button onclick="proverit();">Проверить</button></big></p>
+		<div id="rezultat"></div>
+		<script>
+		function proverit(){
+		cora1 = 4;
+		cora2 = 625;
+		cora3 = 16;
+		cora4 = 15360;
+		cora5 = 1024;
+		cora6 = 2;
+		cora7 = 3;
+		pa1 = document.getElementById('a1').value;
+		pa2 = document.getElementById('a2').value;
+		pa3 = document.getElementById('a3').value;
+		pa4 = document.getElementById('a4').value;
+		pa5 = document.getElementById('a5').value;
+		pa6 = document.getElementById('a6').value;
+		pa7 = document.getElementById('a7').value;									
+		res = 0;
+		if(cora1 == pa1){
+		res +=1;
+		}
+		if(cora2 == pa2){
+		res +=1;
+		}
+		if(cora3 == pa3){
+		res +=1;
+		}
+		if(cora4 == pa4){
+		res +=1;
+		}
+		if(cora5 == pa5){
+		res +=1;
+		}
+		if(cora6 == pa6){
+		res +=1;
+		}
+		if(cora7 == pa7){
+		res +=1;
+		}									
+		mis = 7-res;
+		document.getElementById('rezultat').innerHTML = "Ошибок в тесте: "+mis;
+		}
+		</script>
+	</div>	
+	<hr>
+	</section>
+	<section id="Кодирование графики">
+	<div>	
+			<h2 style="position: relative; text-align: center;">Кодирование графики</h2>
+			<h3 style="position: relative; left: 3%">Справочные материалы</h3>
+			<p style="position: relative; left: 3%;width: 95%"><big> Изображение на экране монитора формируется из отдельных точек - пикселей. Пространственное разрешение монитора - этоколичество пикселей, из которых складывается изображение.
+			<br><br>
+			Глубина цвета - длина двоичного кода, который используется для кодирования цвета пикселя. Количество цветов N в палитре и глубина i цвета связаны между собой соотношением: N=2^i </big></p>
+			<p style="position: relative; left: 3%;width: 95%"> <a style="position: relative; left: 0%;width: 95%"; href="https://lbz.ru/metodist/authors/informatika/3/eor7.php">Босова, электронное приложение к учебнику</a> </p>
+			<img style="position: relative; width:400px; height: 250px; left: 30%"; src="img/img1.jpg"> </img>
+			<br>
+		<h3 style="position: relative; left: 3%">Тестовые задания</h3>
+		<p style="position: relative; left: 3%;width: 95%"><big>
+		Задание 1:
+		<br>
+		Для хранения растрового изображения размером 128*64 пикселей отвели 4 килобайта памяти. Каково максимально возможное число цветов в палитре изображения?
+		<br>
+		Ответ: <input type="text" id="b1">
+		<br><br>
+		Задание 2:
+		<br>
+		Растровый газетный рисунок состоит из точек четырех цветов: черного, темно-серого, светло-серого, белого. Сколько битов понадобится для двоичного кодирования одного пикселя этого рисунка? 
+		<br>
+		Ответ: <input type="text" id="b2">
+		<br><br>
+		Задание 3:
+		<br>
+		Для кодирования одного пикселя используется 3 байта. Фотографию размером 2048*1024 пикселей сохранили в виде несжатого файла. Определите размер получившегося файла в Мбайтах.
+		<br>
+		Ответ: <input type="text" id="b3">
+		<br><br>
+		Задание 4:
+		<br>
+		Несжатое растровое изображение размером
+		128*256 пикселей занимает 4 Кб памяти.Каково максимально возможное число цветов в палитре изображения?
+		<br>
+		Ответ: <input type="text" id="b4">
+		<br><br>
+		Задание 5:
+		<br>
+		Дисплей работает с 256-цветной палитрой в режиме 64*40 пикселей. Для кодирования изображения требуется 125 Кбайт. Сколько страниц видеопамяти оно занимает?
+		<br>
+		Ответ: <input type="text" id="b5">
+		<br><br>
+		Задание 6:
+		<br>
+		Рассчитайте объём видеопамяти, необходимой для хранения графического изображения, занимающего весь экран монитора с разрешением 640*480 и палитрой из 65 536  цветов. Ответ дайте в Кбайтах.
+		<br>
+		Ответ: <input type="text" id="b6">
+		<br><br>
+		Задание 7:
+		<br>
+		Вычислите объём чёрно-белого изображения в байтах, если одна клетка на рисунке соответствует одному пикселю. 
+		<br>
+		<img style="position: relative; width:400px; height: 70px; left: 3%"; src="img/img2.jpg"> </img> 
+		<br>
+		Ответ: <input type="text" id="b7">								
+		<button onclick="prov();">Проверить</button></big></p>
+		<div id="rez"></div>
+		<script>
+		function prov(){
+		corb1 = 16;
+		corb2 = 2;
+		corb3 = 6;
+		corb4 = 2;
+		corb5 = 50;
+		corb6 = 600;
+		corb7 = 12;
+		pb1 = document.getElementById('b1').value;
+		pb2 = document.getElementById('b2').value;
+		pb3 = document.getElementById('b3').value;
+		pb4 = document.getElementById('b4').value;
+		pb5 = document.getElementById('b5').value;
+		pb6 = document.getElementById('b6').value;
+		pb7 = document.getElementById('b7').value;									
+		res = 0;
+		if(corb1 == pb1){
+		res +=1;
+		}
+		if(corb2 == pb2){
+		res +=1;
+		}
+		if(corb3 == pb3){
+		res +=1;
+		}
+		if(corb4 == pb4){
+		res +=1;
+		}
+		if(corb5 == pb5){
+		res +=1;
+		}
+		if(corb6 == pb6){
+		res +=1;
+		}
+		if(corb7 == pb7){
+		res +=1;
+		}									
+		mis = 7-res;
+		document.getElementById('rez').innerHTML = "Ошибок в тесте: "+mis;
+		}
+		</script>			
+		</div>	
+	</section>	
+	<div>
+		<br>
+		<hr>
+		<p>Щекотихина Юлия Денисовна, группа 10и2 </p>
+		<p>Сайт создан для творческого проекта по информатике </p>
+	</div>
+
+</body>
+</html> 
